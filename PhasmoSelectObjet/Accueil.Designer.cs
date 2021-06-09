@@ -96,7 +96,7 @@ namespace PhasmoSelectObjet
             // pictureBox1
             // 
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.BackgroundImage = global::PhasmoSelectObjet.Properties.Resources._9108991;
+            this.pictureBox1.BackgroundImage = global::MacroGosth.Properties.Resources._9108991;
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
@@ -126,7 +126,7 @@ namespace PhasmoSelectObjet
             // 
             resources.ApplyResources(this.btnParam, "btnParam");
             this.btnParam.BackColor = System.Drawing.Color.Black;
-            this.btnParam.BackgroundImage = global::PhasmoSelectObjet.Properties.Resources.settings__v1;
+            this.btnParam.BackgroundImage = global::MacroGosth.Properties.Resources.settings__v1;
             this.btnParam.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btnParam.FlatAppearance.BorderSize = 3;
             this.btnParam.ForeColor = System.Drawing.Color.Gray;
@@ -182,7 +182,7 @@ namespace PhasmoSelectObjet
             this.Controls.Add(this.j2);
             this.Controls.Add(this.j1);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "PhasmoSelectObject";
             this.Activated += new System.EventHandler(this.PhasmoSelectObject_Activated);
             this.Load += new System.EventHandler(this.PhasmoSelectObject_Load);

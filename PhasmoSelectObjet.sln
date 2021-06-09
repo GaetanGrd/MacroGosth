@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhasmoSelectObjet", "PhasmoSelectObjet\PhasmoSelectObjet.csproj", "{0A59954E-3A3F-4EE5-88CC-C6D6FE81E452}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MacroGosth", "PhasmoSelectObjet\MacroGosth.csproj", "{0A59954E-3A3F-4EE5-88CC-C6D6FE81E452}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

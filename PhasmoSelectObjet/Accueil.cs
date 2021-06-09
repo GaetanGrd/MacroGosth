@@ -1,18 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
 using System.Threading;
 using System.Configuration;
-using System.Collections.Specialized;
 
+
+using System.Drawing.Imaging;
+using System.Drawing;
 
 namespace PhasmoSelectObjet
 {
@@ -64,18 +60,16 @@ namespace PhasmoSelectObjet
 
         int sleep = Convert.ToInt32(ConfigurationManager.AppSettings["Delay"]);
         string NoVersion = "1.3.0";
-        string NoVersionPrec = "1.2.0";
         int ColG = 900;
         int ColD = 1440;
         int Itm1 = 355;
         int ecart = 30;
 
 
-
-
-
-
         //Fonction
+
+
+
         private enum WindowShowStyle : uint
         {
             Hide = 0,
@@ -174,14 +168,31 @@ namespace PhasmoSelectObjet
             {
 
                 bool result = ShowWindow(process[0].MainWindowHandle, WindowShowStyle.Minimize);
-                bool result2 = ShowWindow(process[0].MainWindowHandle, WindowShowStyle.ShowMaximized); 
+                bool result2 = ShowWindow(process[0].MainWindowHandle, WindowShowStyle.ShowMaximized);
 
-                Cursor.Position = new System.Drawing.Point(1118, 722);
-                mouse_event((int)(MouseEventFlags.LEFTDOWN), 0, 0, 0, 0);
 
-                mouse_event((int)(MouseEventFlags.LEFTUP), 0, 0, 0, 0);
+                //Create a new bitmap.
+                var bmpScreenshot = new Bitmap(Screen.PrimaryScreen.Bounds.Width,
+                                               Screen.PrimaryScreen.Bounds.Height,
+                                               PixelFormat.Format32bppArgb);
 
-                Thread.Sleep(sleep);
+                // Create a graphics object from the bitmap.
+                var gfxScreenshot = Graphics.FromImage(bmpScreenshot);
+
+                // Take the screenshot from the upper left corner to the right bottom corner.
+                /*gfxScreenshot.CopyFromScreen(Screen.PrimaryScreen.Bounds.X,
+                                            Screen.PrimaryScreen.Bounds.Y,
+                                            0,
+                                            0,
+                                            Screen.PrimaryScreen.Bounds.Size,
+                                            CopyPixelOperation.SourceCopy);
+
+                // Save the screenshot to the specified path that the user has chosen.
+                bmpScreenshot.Save("Screenshot.png", ImageFormat.Png);
+                */
+
+                Thread.Sleep(1000);
+                ClickObjet(1118, 722);
 
                 foreach (int item in ListeObjet)
                 {
@@ -199,6 +210,10 @@ namespace PhasmoSelectObjet
                     y = Itm1 + itemSelect * ecart;
 
                     ClickObjet(x, y);
+                }
+                for (int i = 0; i < 2; i++)
+                {
+                    ClickObjet(878, 832);
                 }
             }
             else

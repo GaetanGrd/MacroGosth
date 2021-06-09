@@ -222,6 +222,7 @@ namespace PhasmoSelectObjet
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbrez);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Parametre";
             this.Text = "Parametre";
             this.Load += new System.EventHandler(this.Parametre_Load);
