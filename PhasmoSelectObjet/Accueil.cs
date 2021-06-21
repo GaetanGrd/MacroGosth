@@ -1,20 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Windows.Forms;
-using System.Runtime.InteropServices;
-using System.Diagnostics;
-using System.Threading;
 using System.Configuration;
-
-
-using System.Drawing.Imaging;
-using System.Drawing;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
+using System.Threading;
+using System.Windows.Forms;
 
 namespace PhasmoSelectObjet
 {
-
-
-
     public partial class PhasmoSelectObject : Form
     {
         public PhasmoSelectObject()
@@ -23,11 +16,10 @@ namespace PhasmoSelectObjet
         }
 
         [DllImport("user32.dll")]
-        static extern void mouse_event(int dwFlags, int dx, int dy, int dwData, int dwExtraInfo);
+        private static extern void mouse_event(int dwFlags, int dx, int dy, int dwData, int dwExtraInfo);
 
         [DllImport("user32.dll")]
         private static extern bool ShowWindow(IntPtr hWnd, WindowShowStyle nCmdShow);
-
 
         //-------------------------------
         [DllImport("user32.dll", CharSet = CharSet.Auto,
@@ -58,17 +50,14 @@ namespace PhasmoSelectObjet
 
         //Déclaration des Variable Global
 
-        int sleep = Convert.ToInt32(ConfigurationManager.AppSettings["Delay"]);
-        string NoVersion = "1.3.0";
-        int ColG = 900;
-        int ColD = 1440;
-        int Itm1 = 355;
-        int ecart = 30;
-
+        private int sleep = Convert.ToInt32(ConfigurationManager.AppSettings["Delay"]);
+        private string NoVersion = "1.3.0";
+        private int ColG = 900;
+        private int ColD = 1440;
+        private int Itm1 = 355;
+        private int ecart = 30;
 
         //Fonction
-
-
 
         private enum WindowShowStyle : uint
         {
@@ -119,7 +108,7 @@ namespace PhasmoSelectObjet
         public List<int> serialisationListeObjet(string Player)
         {
             //Recupere la valeur du joueur selectionner dans app.config et coupe la chaine
-            //pour remplir une liste des objet 
+            //pour remplir une liste des objet
 
             string obj = ConfigurationManager.AppSettings[Player];
             List<int> ListeObjet = new List<int>();
@@ -142,11 +131,9 @@ namespace PhasmoSelectObjet
             return ListeObjet;
         }
 
-
         //evenement et traitement
         private void PhasmoSelectObject_Load(object sender, EventArgs e)
         {
-
             //Affichage de la version
             LbVersion.Text = "Version : " + NoVersion;
 
@@ -166,30 +153,8 @@ namespace PhasmoSelectObjet
             Process[] process = Process.GetProcessesByName("Phasmophobia");
             if (process != null && process.Length > 0)
             {
-
                 bool result = ShowWindow(process[0].MainWindowHandle, WindowShowStyle.Minimize);
                 bool result2 = ShowWindow(process[0].MainWindowHandle, WindowShowStyle.ShowMaximized);
-
-
-                //Create a new bitmap.
-                var bmpScreenshot = new Bitmap(Screen.PrimaryScreen.Bounds.Width,
-                                               Screen.PrimaryScreen.Bounds.Height,
-                                               PixelFormat.Format32bppArgb);
-
-                // Create a graphics object from the bitmap.
-                var gfxScreenshot = Graphics.FromImage(bmpScreenshot);
-
-                // Take the screenshot from the upper left corner to the right bottom corner.
-                /*gfxScreenshot.CopyFromScreen(Screen.PrimaryScreen.Bounds.X,
-                                            Screen.PrimaryScreen.Bounds.Y,
-                                            0,
-                                            0,
-                                            Screen.PrimaryScreen.Bounds.Size,
-                                            CopyPixelOperation.SourceCopy);
-
-                // Save the screenshot to the specified path that the user has chosen.
-                bmpScreenshot.Save("Screenshot.png", ImageFormat.Png);
-                */
 
                 Thread.Sleep(1000);
                 ClickObjet(1118, 722);
@@ -242,7 +207,6 @@ namespace PhasmoSelectObjet
                 process2.Start();
                 BtnLaunchPhasmo.Text = "Fermer le jeux";
             }
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -250,12 +214,8 @@ namespace PhasmoSelectObjet
             this.Close();
         }
 
-
-
         private void btnHelp_Click(object sender, EventArgs e)
         {
-            
-
         }
 
         private void btnParam_Click(object sender, EventArgs e)
@@ -268,7 +228,5 @@ namespace PhasmoSelectObjet
         {
             sleep = Convert.ToInt32(ConfigurationManager.AppSettings["Delay"]);
         }
-
-
     }
 }

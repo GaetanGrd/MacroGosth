@@ -182,7 +182,7 @@ namespace PhasmoSelectObjet
             this.Controls.Add(this.j2);
             this.Controls.Add(this.j1);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "PhasmoSelectObject";
             this.Activated += new System.EventHandler(this.PhasmoSelectObject_Activated);
             this.Load += new System.EventHandler(this.PhasmoSelectObject_Load);
