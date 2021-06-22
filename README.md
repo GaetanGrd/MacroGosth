@@ -1,5 +1,10 @@
 Installation :  
   exécuter le fichier .exe dans le dossier "Install"
+  
+Désinstallation :
+  - Ouvrez le panneaux de configuration -> Programmes -> Désinstaller un Programmes -> chercher "MacroGosth" -> cliquez sur désinstaller.
+  Ou
+  - ouvrez le gestionnaire de fichier -> rendez-vous dans le répetoire du logiciel (par défaut : C:\Program Files (x86)\MacroGosth) et executer unins000.exe.
 
 Fonctionnalités :  
   - Lancer/Fermer le programme comme si on lancé le jeu depuis steam.  
@@ -17,3 +22,4 @@ Fonctionnalités à venir :
     - Ajout de la Gestion des "profils"pour enregistré les listes.
     - Amélioration de l'aspect Graphique de la page options.
   - Ajout d'un bouton "aide" afin d'aider l'utilisateur à comprendre le fonctionnement du programme.
+  - Ajout d'un verrification de version et de la possibilité de la télécharger et de l'installer depuis l'application
