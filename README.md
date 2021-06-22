@@ -12,7 +12,7 @@ Fonctionnalités :
   - Possibilité de changer le temps entre chaque clic (en millisecondes)   
   - Possibilité de modifier la liste d'objets sélectionner par joueur.  
 
-Fonctionnalités à venir :  
+Fonctionnalités et changement à venir :  
   - utilisation de touches raccourcies (F1, F2, F3, F4) afin de sélectionner le joueur plus rapidement.  
   - Détection de l'interface afin de permettre le lancement de la macro depuis n'importe qu'elle interface en jeu.  
   - Permettre le bon fonctionnement de la macro avec un jeu en mode fenêtré peu importe son emplacement sur l'écran ou la résolution du jeu.  
