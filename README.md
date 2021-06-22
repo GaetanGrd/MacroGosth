@@ -16,7 +16,8 @@ Fonctionnalités à venir :
   - utilisation de touches raccourcies (F1, F2, F3, F4) afin de sélectionner le joueur plus rapidement.  
   - Détection de l'interface afin de permettre le lancement de la macro depuis n'importe qu'elle interface en jeu.  
   - Permettre le bon fonctionnement de la macro avec un jeu en mode fenêtré peu importe son emplacement sur l'écran ou la résolution du jeu.  
-  - Correction de problème mineur.  
+  - Correction de problème mineur. 
+    - Le bouton "lancer le jeux" ne s'actualise pas lors de l'ouverture/fermeture du jeux par un autre moyen que part le logiciel. 
   - Amélioration de l'interface Options. 
     - Ajout de bouton afin de reset les liste avec les valeur par defaut. 
     - Ajout de la Gestion des "profils"pour enregistré les listes.
