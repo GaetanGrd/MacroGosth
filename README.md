@@ -2,7 +2,7 @@ Installation :
   exécuter le fichier .exe dans le dossier "Install"
   
 Désinstallation :
-  - Ouvrez le panneaux de configuration -> Programmes -> Désinstaller un Programmes -> chercher "MacroGosth" -> cliquez sur désinstaller.
+  - Ouvrez le panneaux de configuration -> Programmes -> Désinstaller un Programmes -> chercher "MacroGosth"  -> cliquez sur désinstaller.
   Ou
   - ouvrez le gestionnaire de fichier -> rendez-vous dans le répetoire du logiciel (par défaut : C:\Program Files (x86)\MacroGosth) et executer unins000.exe.
 
